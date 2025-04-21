@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nosifer&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Varela&family=Varela+Round&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+}
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    gap: 550px;
+    padding: 20px;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+}
+nav{
+    color: white;
+    background-color:#2D2D2D;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    gap: 80px;
+    padding: 22px;
+    top: 15vh;
+    justify-content: center;
+    align-items: center;
+}
+.module{
+    outline: none;
+    border: none;
+    background-color: #2D2D2D;
+    color: white;
+    padding: 8px;
+    width: 150px;
+    text-decoration: 2px solid underline;
+    font-size: 23px;
+    transition: 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+img{
+    width: 80px;
+}
+h1{
+    color: white;
+    font-size: 50px;
+}
+.signin{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: 2px solid underline;
+}
+.signin:hover{
+    transition: 0.2s ease;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+footer{
+    color: white;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="images/logo.jpg" alt="Smart-City">
+        </div>
+        <div>
+            <h1>About Us</h1>
+        </div>
+        <div>
+            <h3 class="signin">Sign-In/Log-In</h3>
+        </div>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <select name="Modules" class="module" id="" onchange="this.form.action=this.value; this.form.submit();">
+            <option value="">Modules</option>
+            <option value="" disabled></option>
+            <option value="News and Informations">News and Informations</option>
+            <option value="Public Facilities">Public Facilities</option>
+            <option value="Navigation Status">Navigation Status</option>
+        </select>
+        <a href="#contact">Get to Us</a>
+        <a href="">About Us</a>
+    </nav>
+    <section class="aboutus">
+        <p></p>
+    </section>
+    <section class="detailbox"></section>
+    <footer>
+        <p>&copy; 2025 Smart City Management. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
