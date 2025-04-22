@@ -156,27 +156,27 @@
     </style>
 </head>
 <body>
-
-    <!-- HEADER SECTION -->
     <div class="header">
-        <img src="logo.jpeg" alt="Smart City Logo">
+        <img src="logo.jpg" alt="Smart City Logo">
         <div class="header-content">
             <h1>Smart City Public Facilities & Emergency</h1>
             <p>AI-Powered Convenience, Accessibility, and Safety</p>
         </div>
     </div>
-
-    <!-- NAVBAR SECTION (Moved below header) -->
     <nav class="navbar">
-        <a href="#home">Home</a>
-        <select name="Modules" onchange="handleModuleSelect(this)">
-            <option value="">Modules</option>
-            <option value="News and Informations">News and Informations</option>
-            <option value="Public Facilities">Public Facilities</option>
-            <option value="Navigation Module">Navigation Module</option>
-        </select>
-        <a href="#">Get to Us</a>
-        <a href="#">About Us</a>
+        <a href="http://127.0.0.1:5500/city.html/homepage.html">Home</a>
+        <form action="">
+            <select name="Modules" class="module" id="" onchange="this.form.action=this.value; this.form.submit();">
+                <option value="">Modules</option>
+                <option value="" disabled></option>
+                <option value="http://127.0.0.1:5500/city.html/news.html">News and Informations</option>
+                <option value="http://127.0.0.1:5500/city.html/facilities.html">Public Facilities</option>
+                <option value="http://127.0.0.1:5500/city.html/naviggation.html">Navigation Status</option>
+                <option value="http://127.0.0.1:5500/city.html/suggestionfrom.html">Suggestion Form</option>
+            </select>
+        </form>
+        <a href="#contact">Get to Us</a>
+        <a href="http://127.0.0.1:5500/city.html/about.html">About Us</a>
     </nav>
 
     <!-- SEARCH BAR -->
@@ -204,11 +204,11 @@
             { title: "EV Charging Stations", icon: "🔌", description: "Locate and reserve EV charging points.", buttonText: "Find Stations", isEmergency: false },
             { title: "Smart Parking", icon: "🅿️", description: "Find and pre-book parking slots.", buttonText: "Locate Parking", isEmergency: false },
             { title: "Emergency SOS", icon: "🆘", description: "One-tap connection to police, ambulance, or fire brigade.", buttonText: "Tap for Help", isEmergency: true },
-            { title: "Disaster Alerts", icon: "⚠️", description: "Real-time flood/earthquake warnings and shelter navigation.", buttonText: "View Alerts", isEmergency: false },
+            { title: "Disaster Alerts", icon: "⚠", description: "Real-time flood/earthquake warnings and shelter navigation.", buttonText: "View Alerts", isEmergency: false },
             { title: "Public Toilets", icon: "🚻", description: "Find hygienic public toilets nearby.", buttonText: "Search Now", isEmergency: false },
             { title: "Smart Street Lighting", icon: "💡", description: "Adaptive street lighting based on movement and daylight.", buttonText: "Check Coverage", isEmergency: false },
-            { title: "Air Quality Monitoring", icon: "🌫️", description: "View real-time air quality index and health tips.", buttonText: "Check AQI", isEmergency: false },
-            { title: "Smart Waste Management", icon: "🗑️", description: "Locate smart bins and schedule garbage pickup.", buttonText: "Manage Waste", isEmergency: false },
+            { title: "Air Quality Monitoring", icon: "🌫", description: "View real-time air quality index and health tips.", buttonText: "Check AQI", isEmergency: false },
+            { title: "Smart Waste Management", icon: "🗑", description: "Locate smart bins and schedule garbage pickup.", buttonText: "Manage Waste", isEmergency: false },
             { title: "Water ATM Locator", icon: "🚰", description: "Find safe drinking water ATMs around you.", buttonText: "Locate ATM", isEmergency: false },
             { title: "Free Wi-Fi Zones", icon: "📶", description: "Connect to government-sponsored Wi-Fi hotspots.", buttonText: "Find Wi-Fi", isEmergency: false },
             { title: "Lost & Found", icon: "🔎", description: "Report or search lost public property.", buttonText: "Report/Search", isEmergency: false },
