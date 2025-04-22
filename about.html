@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@ nav{
     display: flex;
     width: 100%;
     gap: 80px;
-    padding: 22px;
+    padding: 21px;
     top: 15vh;
     justify-content: center;
     align-items: center;
@@ -69,6 +69,82 @@ h1{
     transform: scale(1.02);
     cursor: pointer;
 }
+.container{
+    height: 1000px;
+    width: 100%;
+    padding-top: 120px;
+    gap: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+.container2{
+    height: 900px;
+    width: 100%;
+    margin-top: -120px;
+    gap: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+.aboutus{
+    height: 600px;
+    width: 1500px;
+    box-shadow: 2px 2px 5px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    background-color: darkgrey;
+    color: black;
+    font-size: 25px;
+    display: flex;
+    text-align: center;
+    padding: 30px;
+}
+.aboutdetails{
+    height: 500px;
+    width: 1000px;
+    box-shadow: 2px 2px 5px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    background-color: darkgrey;
+    color: black;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+    padding-top: 100px;
+}
+.uppercon{
+    display: flex;
+    gap: 250px;
+    justify-content: center;
+}
+.rightcon{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+.leftcon{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+.bottomcon{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    align-items: center;
+}
 footer{
     color: white;
     background-color: black;
@@ -85,7 +161,7 @@ footer{
 <body>
     <header>
         <div>
-            <img src="images/logo.jpg" alt="Smart-City">
+            <img src="logo.jpg" alt="Smart-City">
         </div>
         <div>
             <h1>About Us</h1>
@@ -95,21 +171,67 @@ footer{
         </div>
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <select name="Modules" class="module" id="" onchange="this.form.action=this.value; this.form.submit();">
-            <option value="">Modules</option>
-            <option value="" disabled></option>
-            <option value="News and Informations">News and Informations</option>
-            <option value="Public Facilities">Public Facilities</option>
-            <option value="Navigation Status">Navigation Status</option>
-        </select>
+        <a href="http://127.0.0.1:5500/city.html/homepage.html">Home</a>
+        <form action="">
+            <select name="Modules" class="module" id="" onchange="this.form.action=this.value; this.form.submit();">
+                <option value="">Modules</option>
+                <option value="" disabled></option>
+                <option value="http://127.0.0.1:5500/city.html/news.html">News and Informations</option>
+                <option value="http://127.0.0.1:5500/city.html/facilities.html">Public Facilities</option>
+                <option value="http://127.0.0.1:5500/city.html/naviggation.html">Navigation Status</option>
+                <option value="http://127.0.0.1:5500/city.html/suggestionfrom.html">Suggestion Form</option>
+            </select>
+        </form>
         <a href="#contact">Get to Us</a>
-        <a href="">About Us</a>
+        <a href="http://127.0.0.1:5500/city.html/about.html">About Us</a>
     </nav>
-    <section class="aboutus">
-        <p></p>
+    <section class="container">
+        <h2>Overview</h2>
+        <div class="aboutus">
+            <p>The Smart City Management System is a dynamic, user-centric platform designed to enhance urban life by integrating essential city services into a single, accessible digital hub. This website serves as a centralized gateway for citizens to stay informed, connected, and empowered within their city environment. It features real-time news and updates, comprehensive information about public facilities, and live navigation status to assist with daily commutes and travel planning. In addition, the platform includes a suggestion and feedback form, allowing residents to voice concerns, share ideas, and contribute actively to the betterment of their city.
+                <br><br>
+                With an intuitive layout and responsive interface, the Smart City website is crafted to ensure seamless access across all devices. Its goal is to promote transparency, increase efficiency in public service delivery, and foster community engagement. Whether you’re looking for updates on civic developments, exploring local amenities, or simply trying to find the fastest route across town, the Smart City platform is your reliable digital companion for smarter living.
+                <br><br>
+                Designed with a clean, modern UI and optimized for all screen sizes, the Smart City platform prioritizes user experience while ensuring accessibility for all age groups. Beyond just information, the platform acts as a bridge between city governance and the community, encouraging transparency, accountability, and data-driven urban planning.
+                <br><br>
+                In the future, the system aims to integrate advanced technologies such as IoT sensors, AI-based traffic analysis, smart utility monitoring, and real-time environmental data to create a truly intelligent city network. This project envisions a future where cities are not only livable but responsive, adaptive, and deeply connected — where technology is leveraged to enhance quality of life, promote sustainability, and ensure efficient resource management.
+            </p>
+        </div>
     </section>
-    <section class="detailbox"></section>
+    <section class="container2">
+        <h2>Details</h2>
+        <div class="aboutdetails">
+            <div class="uppercon">
+                <div class="leftcon">
+                    <p>
+                        Shubham Mishra <br>
+                        CSE C <br>
+                        243248 <br><br><br><br>
+                        Rudra Kumar <br>
+                        CST <br>
+                        246082
+                    </p>
+                </div>
+                <div class="rightcon">
+                    <p>
+                        Harshit Bhardwaj <br>
+                        CSE C <br>
+                        243246 <br><br><br><br>
+                        Sunny Kumar Pandey <br>
+                        CSE C <br>
+                        243184
+                    </p>
+                </div>
+            </div>
+            <div class="bottomcon">
+                <p>
+                    Akshay Kumar <br>
+                    CSE A <br>
+                    243
+                </p>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2025 Smart City Management. All Rights Reserved.</p>
     </footer>
