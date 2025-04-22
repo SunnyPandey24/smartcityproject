@@ -108,6 +108,9 @@ nav{
     border-radius: 20px;
 }
 .videobox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 16px;
     background-color: black;
     margin-top: 40px;
