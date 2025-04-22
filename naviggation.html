@@ -23,6 +23,7 @@
       height: 400px;
       width: 100%;
       border-radius: 1rem;
+      z-index: 0;
       box-shadow: 0 10px 15px rgba(0,0,0,0.1);
     }
 
@@ -38,7 +39,7 @@
       padding: 20px 40px;
       align-items: center;
       position: fixed;
-      z-index: 50;
+      z-index: 1000;
       width: 100%;
       top: 0;
     }
@@ -50,10 +51,11 @@
       display: flex;
       width: 100%;
       justify-content: center;
+      align-items: baseline;
       gap: 80px;
-      padding: 25px;
+      padding: 21px;
       top: 80px; /* below header */
-      z-index: 40;
+      z-index: 999;
     }
 
     nav select {
@@ -70,6 +72,43 @@
       padding: 20px;
       margin-top: 50px;
     }
+    .module{
+    outline: none;
+    border: none;
+    background-color: #2D2D2D;
+    color: white;
+    padding: 8px;
+    width: 150px;
+    text-decoration: 2px solid underline;
+    font-size: 23px;
+    transition: 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+a{
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: 2px solid underline;
+}
+a:hover{
+    transition: 0.2s ease;
+    transform: scale(1.02); 
+}
+h1{
+    color: white;
+    font-size: 50px;
+}
+.signin{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: 2px solid underline;
+}
+.signin:hover{
+    transition: 0.2s ease;
+    transform: scale(1.02);
+    cursor: pointer;
+}
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -77,32 +116,32 @@
   <!-- Header -->
   <header>
     <div>
-      <img src="image.jpeg" alt="Smart-City" width="60" height="60">
+      <img src="logo.jpg" alt="Smart-City" width="60" height="60">
     </div>
     <div>
-      <h1 class="text-2xl font-bold">Smart City</h1>
+      <h1 style="font-size: 40px;">Navigation</h1>
     </div>
     <div>
-      <h3 class="text-sm font-semibold cursor-pointer">Sign-In / Log-In</h3>
+      <h3 class="signin">Sign-In / Log-In</h3>
     </div>
   </header>
 
   <!-- Navigation -->
   <nav>
-    <a href="#home" class="hover:text-yellow-300">Home</a>
-    <select 
-      name="Modules" 
-      class="bg-white text-black px-4 py-2 rounded-md cursor-pointer hover:bg-gray-200 transition"
-      onchange="this.form && this.form.action ? this.form.submit() : null;"
-    >
-      <option value="">Modules</option>
-      <option value="News and Informations">News and Informations</option>
-      <option value="Public Facilities">Public Facilities</option>
-      <option value="">Navigation Module</option>
-    </select>
-    <a href="#" class="hover:text-yellow-300">Get to Us</a>
-    <a href="#" class="hover:text-yellow-300">About Us</a>
-  </nav>
+    <a href="http://127.0.0.1:5500/city.html/homepage.html">Home</a>
+    <form action="">
+        <select name="Modules" class="module" id="" onchange="this.form.action=this.value; this.form.submit();">
+            <option value="">Modules</option>
+            <option value="" disabled></option>
+            <option value="http://127.0.0.1:5500/city.html/news.html">News and Informations</option>
+            <option value="http://127.0.0.1:5500/city.html/facilities.html">Public Facilities</option>
+            <option value="http://127.0.0.1:5500/city.html/naviggation.html">Navigation Status</option>
+            <option value="http://127.0.0.1:5500/city.html/suggestionfrom.html">Suggestion Form</option>
+        </select>
+    </form>
+    <a href="#contact">Get to Us</a>
+    <a href="http://127.0.0.1:5500/city.html/about.html">About Us</a>
+</nav>
 
   <!-- Navigation Section -->
   <section class="text-center my-8">
@@ -118,7 +157,7 @@
   <!-- Nearby Locations -->
   <section class="max-w-6xl mx-auto px-4 my-12">
     <h2 class="text-2xl font-semibold mb-6 text-gray-800">Nearby Locations</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6" style="cursor: pointer;">
       <!-- Location Cards -->
       <div class="bg-green-100 text-green-900 p-4 rounded-xl shadow hover:shadow-lg transition">
         <img src="https://imgs.search.brave.com/ys9IvbPnBGR71qIbJmbQxgTQFUz0_BypB3buJVFewlw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2FmZXR5c2lnbi5j/b20vaW1hZ2VzL3Nv/dXJjZS9wYWdlLWxp/c3QtcGFnZXMvcHJv/ZHVjdGdyaWQteG4t/dC9GNjkzMy5wbmc" alt="Park" class="mb-2">
